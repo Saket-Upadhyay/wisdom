@@ -12,8 +12,8 @@
   width: 100%;
 }
 .landing::before {
-  -webkit-animation: puff 0.4s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.3s 1.6s linear forwards;
-          animation: puff 0.4s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.3s 1.6s linear forwards;
+  -webkit-animation: puff 0.0s 0.0s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.0s 0.0s linear forwards;
+          animation: puff 0.0s 0.0s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.0s 0.0s linear forwards;
   border: 1000px solid #ffffff;
   border-radius: 50%;
   content: "";
@@ -31,8 +31,8 @@
 }
 
 .poster-wrapper {
-  -webkit-animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, ballDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, ballUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.8s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-          animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, ballDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, ballUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.8s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+  -webkit-animation: init 0.0s 0.001s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, ballDown 0s 0s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, ballUp 0s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.0s 0.001s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+          animation: init 0.0s 0.001s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, ballDown 0s 0s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, ballUp 0s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.0s 0.001s cubic-bezier(0.86, 0, 0.07, 1) forwards;
   background-color: #ffffff;
   border-radius: 50%;
   height: 60px;
@@ -50,8 +50,8 @@
 }
 
 .posters-container {
-  -webkit-animation: fadesIn 1s ease 3s normal forwards;
-          animation: fadesIn 1s ease 3s normal forwards;
+  -webkit-animation: fadesIn 0s ease 3s normal forwards;
+          animation: fadesIn 0s ease 3s normal forwards;
   background-color: #f4f3f1;
   display: flex;
   flex-flow: row wrap;
@@ -101,8 +101,8 @@
   position: relative;
 }
 .reveal-text::after {
-  -webkit-animation: revealer-text 1.2s 3.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
-          animation: revealer-text 1.2s 3.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+  -webkit-animation: revealer-text 0.3s 3.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+          animation: revealer-text 0.3s 3.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
   bottom: 0;
   background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
   content: "";
