@@ -1,6 +1,6 @@
 from flask import Flask,request,jsonify
 from flask import render_template
-
+import random
 from writerscript import generator
 import base64
 from modules.brainfuckgenerator import BFGenerator
@@ -60,9 +60,11 @@ def checkformdatarender():
     bfg=BFGenerator()
     bf_source=bfg.text_to_brainfuck(base64text)
 
-
+    rindex=random.randint(0,5) # choose any one of the 5 sources given in source.txt
+    print("using data source "+str(rindex)+"\n")
     with open('data/source.txt','r') as src:
-        sourcedat=list(src)[0].strip('\n')
+        sourcedat=list(src)[rindex].strip('\n')
+
 
     ws_source=generator.GEN(bf_source,sourcedat)
 
