@@ -21,7 +21,8 @@ function subfun() {
 
     const XHR = new XMLHttpRequest();
     XHR.addEventListener('load', function (event) {
-        alert("Data Sent");
+        alert("Data Sent. Redirecting.");
+        window.location = "/checkformdatarender";
     });
     // Define what happens in case of error
     XHR.addEventListener(' error', function (event) {

@@ -52,7 +52,7 @@ def getcarddata():
 @app.route('/checkformdatarender')
 def checkformdatarender():
     global FORMDATA
-    FORMDATA={'name': 'Saket Upadhyay', 'cardno': '3714 496353 98431', 'expdate': '08/78', 'cvv': '345'}
+    # FORMDATA={'name': 'Saket Upadhyay', 'cardno': '3714 496353 98431', 'expdate': '08/78', 'cvv': '345'}
     datmod=str(FORMDATA)
     data_bytes=datmod.encode('ascii')
     base64data=base64.b64encode(data_bytes)
