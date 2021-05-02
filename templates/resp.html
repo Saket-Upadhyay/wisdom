@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>W!SDOM Check</title>
+    <link rel="stylesheet" href="../static/resp.css">
 </head>
 <body>
-{{ DATA }}
+<h1>Data Sent Over W!SDOM Server</h1>
+<div class="flex">
+    <h4>Original JSON Form Data</h4>
+    <br>
+<p>
+    {{ RAWDATA }}
+</p>
+</div>
+<div class="flex">
+    <h4>W!SDOM Form Data</h4>
+    <br>
+<p>
+    {{ NEWDATA }}
+</p>
+</div>
+
 </body>
 </html>

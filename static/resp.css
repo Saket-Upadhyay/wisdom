@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  margn: auto;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  text-align: justify;
+  /*  works on ff but not in chrome  */
+  column-gap: 2rem;
+  padding: 0 2rem;
+}
+p {
+  padding: 1rem;
+}

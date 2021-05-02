@@ -1,8 +1,9 @@
 from flask import Flask,request,jsonify
 from flask import render_template
 
-import writerscript as ws
+from writerscript import generator
 import base64
+from modules.brainfuckgenerator import BFGenerator
 
 app: Flask = Flask(__name__)
 SECRET_KEY = b'_5#y2L"F4Q8z\n\xec]/'
@@ -51,7 +52,24 @@ def getcarddata():
 @app.route('/checkformdatarender')
 def checkformdatarender():
     global FORMDATA
-    return render_template('resp.html',DATA=FORMDATA)
+    FORMDATA={'name': 'Saket Upadhyay', 'cardno': '3714 496353 98431', 'expdate': '08/78', 'cvv': '345'}
+    datmod=str(FORMDATA)
+    data_bytes=datmod.encode('ascii')
+    base64data=base64.b64encode(data_bytes)
+    base64text=base64data.decode('ascii')
+    bfg=BFGenerator()
+    bf_source=bfg.text_to_brainfuck(base64text)
+
+
+    with open('data/source.txt','r') as src:
+        sourcedat=list(src)[0].strip('\n')
+
+    ws_source=generator.GEN(bf_source,sourcedat)
+
+    with open('temp/out.pen','w') as tempout:
+        tempout.write(ws_source)
+
+    return render_template('resp.html',NEWDATA=ws_source,RAWDATA=FORMDATA)
 
 
 if __name__ == '__main__':

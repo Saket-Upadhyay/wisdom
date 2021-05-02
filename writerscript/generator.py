@@ -23,11 +23,9 @@ def bf2wsop(bfstr):
         opcodes.append(bf2ws_dir[i])
     return opcodes
 
-def GEN(BFsourceFile,TextSourceFile):
+def GEN(BFsourceDATA,TextSourceData):
 
-    bfc=""
-    with open(BFsourceFile,'r') as bfcf:
-        bfc=bfcf.readlines()[0].strip('\n')
+    bfc=BFsourceDATA
     lims=bf2wsop(bfc)
 
     cycle=False
@@ -38,8 +36,7 @@ def GEN(BFsourceFile,TextSourceFile):
         sum+=i
     
 
-    with open(TextSourceFile,'r') as src:
-        sourcedat=list(src)[0].strip('\n')
+    sourcedat=TextSourceData
 
     srcString=sourcedat.split(' ')
 
@@ -57,24 +54,26 @@ def GEN(BFsourceFile,TextSourceFile):
         print("INFO (o_o) :Source Feed : "+str(sum)+" Words Needed, "+str(len(srcString))+" Provided [Linear Mode].\n")
 
 
-    
-    with open('out.pen','w') as dest:
-        sptr=0
-        dptr=0
-        for lim in lims:
-            dat=""
-            dptr+=lim
-            try:
-                for i in range(sptr,dptr):
-                        dat+=srcString[i]+' '
-            except IndexError:
-                print("Error (x_x) - Not Enough Source Feed : "+str(sum)+" Words Needed, "+str(len(srcString))+" Provided. Exiting.")
-                exit(-1)
 
-            dat=dat[0:-1]
-            dest.write(dat+','+'\n')
-            sptr+=lim
+    sptr=0
+    dptr=0
+    FINALDATA=""
+    for lim in lims:
+        dat=""
+        dptr+=lim
+        try:
+            for i in range(sptr,dptr):
+                    dat+=srcString[i]+' '
+        except IndexError:
+            print("Error (x_x) - Not Enough Source Feed : "+str(sum)+" Words Needed, "+str(len(srcString))+" Provided. Exiting.")
+            exit(-1)
+
+        dat=dat[0:-1]
+        FINALDATA=FINALDATA+dat+','+'\n'
+        sptr+=lim
     print("DONE (^_^).")
+    return FINALDATA
+
 
 if __name__ == "__main__":
     pass
