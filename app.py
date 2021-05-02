@@ -60,7 +60,7 @@ def checkformdatarender():
     bfg=BFGenerator()
     bf_source=bfg.text_to_brainfuck(base64text)
 
-    rindex=random.randint(0,5) # choose any one of the 5 sources given in source.txt
+    rindex=random.randint(0,6) # choose any one of the 5 sources given in source.txt
     print("using data source "+str(rindex)+"\n")
     with open('data/source.txt','r') as src:
         sourcedat=list(src)[rindex].strip('\n')
