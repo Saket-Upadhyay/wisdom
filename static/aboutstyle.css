@@ -13,7 +13,9 @@ body {
 p {
   margin-bottom: 2em;
 }
-
+strong{
+  font-weight: bold;
+}
 header {
   border-bottom: solid 1px #e0e0e0;
   margin: 0 0 20px 0;

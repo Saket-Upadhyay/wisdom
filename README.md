@@ -10,6 +10,6 @@ WiSDOM  can obfuscate the same plaintext/data structure/ binary data (<1MB) into
 This can also be extended to store data in databases where heavy encryption algorithms cannot be implemented due to resource constraints.
 
 WiSDOM is based on WriterScript, an opensource esoteric programming language.
-and uses it's capabilities and strategy to convert data into writerscript code on the go for transmission over internet protocols.
+and uses it's capabilities and strategy to convert data into writerscript code on the go for transmission over internet.
 
 WiSDOM also provides and easy-to-use API and GUI (made in Python3 Flask).
