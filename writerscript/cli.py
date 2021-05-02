@@ -13,7 +13,7 @@ https://github.com/Saket-Upadhyay/WriterScript
 from __future__ import print_function
 
 import argparse
-import setup
+# import setup
 
 import writerscript
 
@@ -30,8 +30,8 @@ def main():
     a2=arg_parser.add_argument(
         "-v",
         "--version",
-        action="version",
-        version="%(prog)s {0}".format(setup.__VERSION__),
+        action="version"
+        # version="%(prog)s {0}".format(setup.__VERSION__),
     )
 
     a3=arg_parser.add_argument('-e',action='store_true',help='Toggle Execution',dest="execute")
