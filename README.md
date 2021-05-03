@@ -1,6 +1,6 @@
 # WiSDOM
 
-> This repository contains the prototype for WiSDOM concept. 
+> This repository contains the prototype for WiSDOM obfuscation module concept. Created during HackDSC'21 under Open Innovation in Data Privacy and Security domain. 
 
 ![](docs/bannerblack.png)
 
