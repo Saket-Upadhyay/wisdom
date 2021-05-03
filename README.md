@@ -2,7 +2,7 @@
 
 > This repository contains the prototype for WiSDOM concept. 
 
-![](docs/banner.png)
+![](docs/bannerblack.png)
 
 **WiSDOM : WriterScript based Data Obfuscation Module**
 
