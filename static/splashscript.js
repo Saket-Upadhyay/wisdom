@@ -11,7 +11,7 @@ const elts = {
 // The strings to morph between. You can change these to anything you want!
 const texts = [
   "WiSDOM",
-  "Adaptive Data Obfuscation"
+  "Strategically Chaotic"
 ];
 
 

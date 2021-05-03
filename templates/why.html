@@ -22,27 +22,16 @@
       <h2 class="pageSubTitle">our motivation.</h2>
     </header>
     <section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat tortor a turpis mattis, in blandit orci
-        venenatis. Quisque justo lacus, rutrum mattis tortor et, aliquam auctor risus. Mauris quis elit turpis. Morbi
-        non nisl nunc. Duis elit quam, lobortis eget pretium sed, eleifend eu dui. Sed molestie ornare suscipit.
-        Phasellus facilisis at quam sed tincidunt. Phasellus eget odio laoreet, dictum augue ac, dictum lorem. Nulla
-        facilisi. Phasellus elit augue, cursus eu ante nec, vestibulum adipiscing mi. Nunc adipiscing nibh risus, sed
-        auctor sapien sodales in. Morbi in purus diam. In id consequat velit, eget sodales enim. Nam a massa sed orci
-        blandit interdum eget et ligula. Pellentesque laoreet semper vulputate.</p>
+      <p>Let's consider the follwing scenario, Alice and Bob are two netizens just casually communicating over their fav. platform.
+      Mallory is malicious attacker who is listening to the transmission, now there can be one of the two generic cases :-
+      </p>
+        <p><strong>1.</strong> Alice and Bob are on insecure protocol like HTTP,FTP or TELNET; All <strong>their data is being sent over in plain text!</strong> so only criteria for Mallory to read their conversation is to know the language they are communicating in.</p>
 
-      <p>Proin laoreet molestie mi ac mattis. Curabitur velit lorem, euismod eget leo sed, imperdiet ullamcorper mauris.
-        Fusce posuere dapibus eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper massa
-        lectus, et tempor orci dapibus non. Pellentesque id enim commodo, scelerisque augue in, pharetra purus. Donec
-        leo odio, consequat non tellus tincidunt, rhoncus porta urna.</p>
+        <p><strong>2.</strong> The second case can be Alice and Bob are using generic secure protocols like HTTPS, TLS and Certificate signing, but they are on Public internet connection that means that Mallory with some technical knowledge can <strong>inject his certificate</strong> in the communication channel and will be able to effectively convert all the HTTPS data to plaintext, rendering the security of HTTPS and similar protocols uneffective.</p>
 
-      <p>Aenean tincidunt sed metus et mollis. Pellentesque tristique risus ac suscipit ornare. Sed a tempor nisl. Nam
-        imperdiet mauris vel nunc varius, id volutpat elit porta. Etiam eu consectetur dui. Interdum et malesuada fames
-        ac ante ipsum primis in faucibus. Aenean sollicitudin fermentum nulla, eu ultricies orci imperdiet sed. Cras
-        vitae quam blandit quam volutpat tincidunt vel vel quam. Ut id dictum nisl, nec commodo augue. Donec sed
-        imperdiet arcu, nec ullamcorper ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Duis id egestas est. Pellentesque eleifend, nisi quis eleifend blandit, lacus ligula tempus
-        quam, non sagittis eros tortor vel massa. Duis posuere pellentesque arcu in sollicitudin.</p>
-    </section>
+        <p>A generic observation of digital space around us will easily point out thousands of Alices and Bobs risking their critical information to these scenarios. This is want we want to change, if we cannot encrypt the data with heavy, resource extensive and time consuming cryptographic algorithms then we should make the job for attacker so hard that they will move to easier targets.</p>
+
+      </section>
   </article>
  <article class="wrapper">
     <header>
@@ -50,19 +39,13 @@
       <h2 class="pageSubTitle">certificate injections and curveballs*.</h2>
     </header>
     <section>
-      <p>Proin laoreet molestie mi ac mattis. Curabitur velit lorem, euismod eget leo sed, imperdiet ullamcorper mauris.
-        Fusce posuere dapibus eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper massa
-        lectus, et tempor orci dapibus non. Pellentesque id enim commodo, scelerisque augue in, pharetra purus. Donec
-        leo odio, consequat non tellus tincidunt, rhoncus porta urna.</p>
+      <p>CurveBall (CVE-2020-0601) is a web browser security vulnerability and spoofing attack discovered and released by the NSA in 2020. The exploit targets Microsoft CryptoAPI, the program library that handles cryptographic functions for the Windows 10 operating system. The vulnerability affects Microsoft Edge and Google Chrome.
 
-      <p>Aenean tincidunt sed metus et mollis. Pellentesque tristique risus ac suscipit ornare. Sed a tempor nisl. Nam
-        imperdiet mauris vel nunc varius, id volutpat elit porta. Etiam eu consectetur dui. Interdum et malesuada fames
-        ac ante ipsum primis in faucibus. Aenean sollicitudin fermentum nulla, eu ultricies orci imperdiet sed. Cras
-        vitae quam blandit quam volutpat tincidunt vel vel quam. Ut id dictum nisl, nec commodo augue. Donec sed
-        imperdiet arcu, nec ullamcorper ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Duis id egestas est. Pellentesque eleifend, nisi quis eleifend blandit, lacus ligula tempus
-        quam, non sagittis eros tortor vel massa. Duis posuere pellentesque arcu in sollicitudin.</p>
-    </section>
+      This allows attacker to inject their own certificates into websites and replicate the second scenario we discussed above.</p>
+
+        <p>MITM attacks are generally taken lightly but are critical threat to any security strategy. As proven many times in recent past, attackes are chaining multiple exploits just to MITM leverage on a network.</p>
+<p>This shows the need for new algorithms ands strategies to counter this existing attack model.</p>
+       </section>
   </article>
 
   <article class="wrapper">
@@ -71,18 +54,10 @@
       <h2 class="pageSubTitle">strategically chaotic.</h2>
     </header>
     <section>
-      <p>Proin laoreet molestie mi ac mattis. Curabitur velit lorem, euismod eget leo sed, imperdiet ullamcorper mauris.
-        Fusce posuere dapibus eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper massa
-        lectus, et tempor orci dapibus non. Pellentesque id enim commodo, scelerisque augue in, pharetra purus. Donec
-        leo odio, consequat non tellus tincidunt, rhoncus porta urna.</p>
+        <p>WiSDOM can obfuscate the any plaintext / data structure / binary data (<1MB) <strong>into infinite combinations</strong> of random data for transmission over insecure internet protocols like HTTP, TELNET and FTP. This can also be extended to store data in databases where heavy encryption algorithms cannot be implemented due to resource constraints.
 
-      <p>Aenean tincidunt sed metus et mollis. Pellentesque tristique risus ac suscipit ornare. Sed a tempor nisl. Nam
-        imperdiet mauris vel nunc varius, id volutpat elit porta. Etiam eu consectetur dui. Interdum et malesuada fames
-        ac ante ipsum primis in faucibus. Aenean sollicitudin fermentum nulla, eu ultricies orci imperdiet sed. Cras
-        vitae quam blandit quam volutpat tincidunt vel vel quam. Ut id dictum nisl, nec commodo augue. Donec sed
-        imperdiet arcu, nec ullamcorper ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Duis id egestas est. Pellentesque eleifend, nisi quis eleifend blandit, lacus ligula tempus
-        quam, non sagittis eros tortor vel massa. Duis posuere pellentesque arcu in sollicitudin.</p>
+WiSDOM is based on WriterScript, an opensource esoteric programming language. and uses it's capabilities and strategy to convert data into writerscript code on the go for transmission over internet.</p>
+
     </section>
   </article>
 
