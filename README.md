@@ -13,3 +13,5 @@ Even if your sensitive data is intercepted chances are that it will be ignored d
 WiSDOM can obfuscate your plaintext/data structure/ binary data (<1MB) into **infinite** combinations of random data for transmission over insecure internet protocols like HTTP, TELNET, and FTP. This **can also be extended to store data in databases** where heavy encryption algorithms cannot be implemented due to resource constraints or instant messaging services. More accessible than many encryptions algorithms, efficient on low-end systems.
 
 WiSDOM also provides and easy-to-use API and GUI (made in Python3 Flask).
+
+> NOTE : If https://wisdomdemo.herokuapp.com/checkformdatarender crashes then please **refresh** the page, there is some unknown bug in heroku deployment that does not happen in local execution.
