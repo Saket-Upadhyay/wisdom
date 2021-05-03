@@ -130,4 +130,4 @@ dmypy.json
 
 #project specific
 
-temp/out.pen
+#temp/out.pen
