@@ -10,6 +10,11 @@ from modules.brainfuckgenerator import BFGenerator
 app: Flask = Flask(__name__)
 SECRET_KEY = b'_5#y2L"F4Q8z\n\xec]/'
 
+# Clearing all the file contents for security
+open('temp/data.txt', 'w').close()
+open('data/out.pen', 'w').close()
+open('temp/out.pen', 'w').close()
+
 global FORMDATA
 global DECODEDDATA
 DECODEDDATA=''
@@ -125,8 +130,4 @@ def decoderoutine(obfsdata):
         DECODEDDATA=decodedb64data
 
 if __name__ == '__main__':
-    # Clearing all the file contents for security
-    open('temp/data.txt', 'w').close()
-    open('data/out.pen', 'w').close()
-    open('temp/out.pen', 'w').close()
     app.run("0.0.0.0", 5000)
