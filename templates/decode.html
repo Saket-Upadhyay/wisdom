@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>WiSDOM Decode</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <style>
+        body {
+  background-color: rgb(239, 239, 239);
+  max-width: 1170px;
+  margin: auto auto;
+  padding: 0;
+}
+    </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+  <div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div>
+              <h2>WiSDOM Decode</h2>
+            </div>
+            <form method="post" data-form-title="CONTACT US" action="decodeobfsdata">
+              <div class="form-group">
+                <textarea class="form-control" name="obfsdata" placeholder="Obfuscated Data" rows="1" data-form-field="obfsdata"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-lg btn-danger">Submit to API</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="text-align: center;">
+    <h3>
+    RESULT
+</h3>
+<br>
+{{ DATAFROMAPI }}
+</div>
+
+<!-- partial -->
+
+</body>
+</html>

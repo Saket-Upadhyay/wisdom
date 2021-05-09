@@ -14,7 +14,7 @@ from __future__ import print_function
 import sys
 import ply.yacc as yacc
 import ply.lex as lex
-
+import io
 tokens = (
     "INC",
     "DEC",
@@ -116,6 +116,7 @@ class Commands:
         self.commands = []
 
     def run(self, program):
+        tempvar=[]
         for command in self.commands:
             command.run(program)
 
@@ -126,6 +127,7 @@ class Commands:
 class Command:
     def __init__(self, command):
         self.command = command
+        self.CHARGOT=''
 
     def run(self, program):
         if isinstance(self.command, Loop):
@@ -146,8 +148,18 @@ class Command:
             program.location -= 1
         if self.command == t_SHR:
             program.location += 1
+
+
         if self.command == t_OUT:
-            sys.stdout.write(chr(program.data[program.location]))
+            self.CHARGOT=chr(program.data[program.location])
+            # sys.stdout.write(self.CHARGOT)
+            backup=sys.stdout
+            new_stdout = io.StringIO()
+            sys.stdout = open('temp/data.txt',"a")
+            sys.stdout.write(self.CHARGOT)
+            sys.stdout=backup
+
+
         if self.command == t_IN:
             try:
                 RIN=int(input("Input (0-255) >"))
@@ -160,6 +172,7 @@ class Command:
                 print("\nError (x_x) : I/O Exception, Exiting.")
                 program.data = None
                 exit(-1)
+
 
 
     def __str__(self):
