@@ -2,6 +2,8 @@
 
 > This repository contains the prototype for WiSDOM obfuscation module concept. Created during HackDSC'21 under Open Innovation in Data Privacy and Security domain. 
 
+> This project is in active development phase.
+
 ![](docs/bannerblack.png)
 
 **WiSDOM : WriterScript based Data Obfuscation Module**
