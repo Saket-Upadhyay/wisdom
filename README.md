@@ -1,8 +1,9 @@
 # WiSDOM
 
+[हिन्दी में पढ़ने के लिए यहाँ क्लिक करें](https://github.com/Saket-Upadhyay/wisdom/blob/main/Readme_HI.md)
 > This repository contains the prototype for WiSDOM obfuscation module concept. Created during HackDSC'21 under Open Innovation in Data Privacy and Security domain. 
 
-> This project is in active development phase.
+> This project is in passive development state.
 
 ![](docs/bannerblack.png)
 
